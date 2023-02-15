@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CreateUserDTO } from '../../dtos/create-user.dto';
 import { UserService } from './service';
 
@@ -6,8 +6,8 @@ import { UserService } from './service';
 export class UserController {
   constructor(private readonly service: UserService) {}
 
-  @Post()
-  getHello(): string {
+  @Get()
+  getAlive(): string {
     return "I'm alive";
   }
 
